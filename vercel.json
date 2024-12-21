@@ -1,20 +1,9 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "main.py",
-        "use": "@vercel/python"
+    "functions": {
+      "api/index.js": {
+        "memory": 128,
+        "maxDuration": 10
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/main.py"
-      }
-    ],
-    "env": {
-      "FLASK_ENV": "production",
-      "FLASK_APP": "main.py"
     }
   }
   
